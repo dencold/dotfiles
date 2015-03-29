@@ -10,9 +10,8 @@ The vim dotfiles use the fantastic [pathogen](https://github.com/tpope/vim-patho
 
 Once you've cloned the dotfiles repo follow these steps to get the submodule code.
 
-1. `cd vim/bundle`
-2. `git submodule init`
-3. `git submodule update`
+1. `git submodule init vim/bundle`
+2. `git submodule update vim/bundle`
 
 Now if you cd into any of the subdirectories in the bundle directory, you'll see all of the source has been pulled down. 
 

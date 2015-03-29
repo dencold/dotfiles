@@ -26,12 +26,29 @@ then
 fi
 
 #-----------------------------------------------------------------------------------
-# Directory Creation
-# - cleans anything that has been installed to DEPLOY_DIR & recreates.
+# Cleanup
+# - removes any pre-installed dotfiles
 #-----------------------------------------------------------------------------------
 echo "Cleaning any previous dotfiles..."
-rm -rf $HOME/.vim; rm -rf $HOME/.vim
+rm -f $HOME/.vimrc; rm -rf $HOME/.vim
+
+#-----------------------------------------------------------------------------------
+# vim
+# - installs vim dotfiles & associated plugins
+#-----------------------------------------------------------------------------------
+echo "Installing vim dotfiles..."
+
+# first we initialize the plugin submodules
+git submodule init vim/bundle
+git submodule update vim/bundle
+
+# now install our vim directory
+cp -rp vim $HOME/.vim
+
+# finally, symlink our vimrc file to .vimrc
+ln -s $HOME/.vim/vimrc $HOME/.vimrc
 
 echo
 echo "!! FINISHED - dotfiles install"
 echo "- reminder that you may need to source your new profile"
+echo
