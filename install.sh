@@ -10,18 +10,20 @@
 # $ ./install.sh
 #
 
+echo 
 echo "************************ WARNING - DOTFILES INSTALL ************************ "
-echo ""
+echo 
 echo "   Running this script will replace your dotfiles (.vimrc/.bashrc/etc.)   "
-echo "   And any associated config directories (such as .vim) "
+echo "   and any associated config directories (such as .vim) "
 echo "   Back up previous versions if they are important to you. "
 echo ""
 echo "************************* YOU HAVE BEEN WARNED! :) ************************** "
-echo "Are you SURE? (y/N) ==> "
-read SURE
+echo 
+read -p "Are you SURE? (y/N) ==> " SURE
 
 if [[ "$SURE" != "Y" && "$SURE" != "y" ]];
 then
+    echo "Aborting dotfiles install."
     exit 0
 fi
 
@@ -38,7 +40,8 @@ rm -f $HOME/.vimrc; rm -rf $HOME/.vim
 #-----------------------------------------------------------------------------------
 echo "Installing vim dotfiles..."
 
-# first we initialize the plugin submodules
+# first we initialize the plugin submodules, see the README for this repository
+# for more background on what is happening here.
 git submodule init vim/bundle
 git submodule update vim/bundle
 
@@ -49,6 +52,6 @@ cp -rp vim $HOME/.vim
 ln -s $HOME/.vim/vimrc $HOME/.vimrc
 
 echo
-echo "!! FINISHED - dotfiles install"
+echo "!! FINISHED - dotfiles install !!"
 echo "- reminder that you may need to source your new profile"
 echo
