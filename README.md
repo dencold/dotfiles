@@ -2,7 +2,7 @@
 
 My dotfiles for configuring vim/bash/etc. Please feel free to use/copy/modify any of the files here for your own usage. Hope it makes your development environment a little snazzier.
 
-For convenience, this repository has an install script at it's root. This will clean up any current dotfiles and install the configuration to their appropriate directories. Here are the steps to run:
+For convenience, this repository has an install script at its root. This will clean up any current dotfiles and install the configuration to their appropriate directories. Here are the steps to run:
 
 1. `git clone git@github.com:dencold/dotfiles.git`
 2. `cd dotfiles`
