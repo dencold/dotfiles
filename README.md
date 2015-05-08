@@ -26,3 +26,18 @@ Now if you cd into any of the subdirectories in the bundle directory, you'll see
 Also note that the [install script](https://github.com/dencold/dotfiles/blob/master/install.sh) will do this automatically for you as well. 
 
 Some helpful [reference from the git book](http://git-scm.com/book/en/v2/Git-Tools-Submodules#Cloning-a-Project-with-Submodules).
+
+### Adding new packages
+
+If you'd like to add additional packages to pathogen, follow these steps:
+
+1. Locate the package's repository link (e.g. [https://github.com/fatih/vim-go.git](https://github.com/fatih/vim-go.git).
+2. Add it as a submodule in the `vim/bundle` directory:
+
+	```
+	git submodule add https://github.com/fatih/vim-go.git \
+	    vim/bundle/vim-go
+	```
+
+3. Run the install script: `./install.sh`
+4. Restart vim and you're off to the races.
