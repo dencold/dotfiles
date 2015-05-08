@@ -40,4 +40,10 @@ If you'd like to add additional packages to pathogen, follow these steps:
 	```
 
 3. Run the install script: `./install.sh`
-4. Restart vim and you're off to the races.
+4. Restart vim and you should see the new package installed.
+5. Last bit of housekeeping, we'll want to commit the package to our git repository. Do so with the following commands:
+
+	```
+	git add .gitmodules vim/bundle/vim-go
+	git commit
+	```
