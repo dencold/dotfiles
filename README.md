@@ -31,7 +31,7 @@ Some helpful [reference from the git book](http://git-scm.com/book/en/v2/Git-Too
 
 If you'd like to add additional packages to pathogen, follow these steps:
 
-1. Locate the package's repository link (e.g. [https://github.com/fatih/vim-go.git](https://github.com/fatih/vim-go.git).
+1. Locate the package's repository link (e.g. [https://github.com/fatih/vim-go.git](https://github.com/fatih/vim-go.git))
 2. Add it as a submodule in the `vim/bundle` directory:
 
 	```
@@ -39,7 +39,7 @@ If you'd like to add additional packages to pathogen, follow these steps:
 	    vim/bundle/vim-go
 	```
 
-3. Run the install script: `./install.sh`
+3. Run the install script at the dotfiles root: `./install.sh`
 4. Restart vim and you should see the new package installed.
 5. Last bit of housekeeping, we'll want to commit the package to our git repository. Do so with the following commands:
 

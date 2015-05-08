@@ -43,7 +43,7 @@ echo "Installing vim dotfiles..."
 # first we initialize the plugin submodules, see the README for this repository
 # for more background on what is happening here.
 git submodule init vim/bundle
-git submodule update vim/bundle
+git submodule update --init --recursive vim/bundle
 
 # now install our vim directory
 cp -rp vim $HOME/.vim
