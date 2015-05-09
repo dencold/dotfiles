@@ -27,18 +27,34 @@ then
     exit 0
 fi
 
+OS_TYPE=`uname`
+
 #-----------------------------------------------------------------------------------
 # Cleanup
 # - removes any pre-installed dotfiles
 #-----------------------------------------------------------------------------------
 echo "Cleaning any previous dotfiles..."
-rm -f $HOME/.vimrc; rm -rf $HOME/.vim
+rm -f $HOME/.vimrc; rm -rf $HOME/.vim; rm -f $HOME/.profile
+
+#-----------------------------------------------------------------------------------
+# bash
+# -installs .profile
+#-----------------------------------------------------------------------------------
+echo "Installing .profile"
+cp -p bash/profile $HOME/.profile
 
 #-----------------------------------------------------------------------------------
 # vim
 # - installs vim dotfiles & associated plugins
 #-----------------------------------------------------------------------------------
 echo "Installing vim dotfiles..."
+
+# Mac OSX has vim 7.3 installed by default, as a simple fix, we install MacVim
+# and symlink vim to our local bin directory. This gets us the latest & greatest
+# version of vim painlessly.
+if [[ "$OS_TYPE" == 'Darwin' ]]; then
+    cp -p vim/bin/mvim $HOME/bin
+fi
 
 # first we initialize the plugin submodules, see the README for this repository
 # for more background on what is happening here.
