@@ -8,6 +8,7 @@ export EDITOR=vim
 export GIT_EDITOR=vim
 
 export GOPATH=$HOME
+export GOBIN=$HOME/bin
 export PATH=$PATH:$HOME/bin
 
 if [[ "$OS_TYPE" == 'Darwin' ]]; then
