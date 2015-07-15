@@ -7,6 +7,9 @@ OS_TYPE=`uname`
 export EDITOR=vim
 export GIT_EDITOR=vim
 
+# histcontrol will ignore spaces AND ignore duplicates
+HISTCONTROL=ignoreboth
+
 export GOPATH=$HOME
 export GOBIN=$HOME/bin
 export PATH=$PATH:$HOME/bin
