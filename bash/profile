@@ -19,3 +19,7 @@ if [[ "$OS_TYPE" == 'Darwin' ]]; then
     alias vi=vim
 fi
 
+if [[ -f $HOME/.aliases ]]; then
+    source $HOME/.aliases
+fi
+
