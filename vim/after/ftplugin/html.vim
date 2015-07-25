@@ -8,5 +8,3 @@ set shiftwidth=2
 set smarttab
 set expandtab
 
-set foldmethod=indent
-set foldlevel=10
