@@ -47,3 +47,18 @@ If you'd like to add additional packages to pathogen, follow these steps:
 	git add .gitmodules vim/bundle/vim-go
 	git commit
 	```
+
+### Removing unwanted packages
+
+Removing packages is a litle more involved. There isn't a dedicated git command for deleting submodules so we have some extra hoops to go through. A good reference here is [this entry on stackoverflow](http://stackoverflow.com/a/1260982). Here are the steps:
+
+1. Delete the relevant section from the `.gitmodules` file
+2. Stage the .gitmodules changes: `git add .gitmodules`
+3. Delete the relevant section from `.git/config`
+4. Run `git rm --cached path_to_submodule` (no trailing slash)
+5. Run `rm -rf .git/modules/path_to_submodule`
+6. Commit: `git commit -m "Removed submodule <name>"`
+7. Delete the now untracked submodule files: `rm -rf path_to_submodule`
+
+You once you are done with those steps, you can re-run the `install.sh` script and the package will be removed.
+
