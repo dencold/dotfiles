@@ -34,7 +34,8 @@ OS_TYPE=`uname`
 # - removes any pre-installed dotfiles
 #-----------------------------------------------------------------------------------
 echo "Cleaning any previous dotfiles..."
-rm -f $HOME/.vimrc; rm -rf $HOME/.vim; rm -f $HOME/.profile
+rm -f $HOME/.vimrc; rm -rf $HOME/.vim;
+rm -f $HOME/.profile; rm -f $HOME/.bashrc;
 
 #-----------------------------------------------------------------------------------
 # bash
@@ -42,6 +43,7 @@ rm -f $HOME/.vimrc; rm -rf $HOME/.vim; rm -f $HOME/.profile
 #-----------------------------------------------------------------------------------
 echo "Installing .profile"
 cp -p bash/profile $HOME/.profile
+ln -s $HOME/.profile $HOME/.bashrc
 
 #-----------------------------------------------------------------------------------
 # vim
