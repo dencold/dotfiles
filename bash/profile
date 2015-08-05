@@ -20,6 +20,7 @@ if [[ "$OS_TYPE" == 'Darwin' ]]; then
 fi
 
 alias vi=vim
+alias ls='ls --color'
 
 # if we have setup a .aliases file then load it in, note that this is set
 # here so that user-defined aliases can take precendence over profile settings
