@@ -58,11 +58,11 @@ ln -s $HOME/.profile $HOME/.bashrc
 #-----------------------------------------------------------------------------------
 echo "- Installing vim dotfiles"
 
-# Mac OSX has vim 7.3 installed by default, as a simple fix, we install MacVim
+# Mac OSX has vim 7.3 installed by default, as a simple fix, we install VimR
 # and symlink vim to our local bin directory. This gets us the latest & greatest
 # version of vim painlessly.
 if [[ "$OS_TYPE" == 'Darwin' ]]; then
-    cp -p vim/bin/mvim $HOME/bin
+    cp -p vim/bin/vimr $HOME/bin
 fi
 
 # first we initialize the plugin submodules, see the README for this repository

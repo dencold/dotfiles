@@ -16,11 +16,14 @@ export PATH=$PATH:$HOME/bin
 
 # alias setup
 if [[ "$OS_TYPE" == 'Darwin' ]]; then
-    alias vim='mvim -v'
+    alias vim='vimr'
+    alias ls='ls -G'
+
+elif [[ "$OS_TYPE" == 'Linux' ]]; then
+    alias ls='ls --color'
 fi
 
 alias vi=vim
-alias ls='ls --color'
 
 # if we have setup a .aliases file then load it in, note that this is set
 # here so that user-defined aliases can take precendence over profile settings
