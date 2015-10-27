@@ -1,4 +1,8 @@
-
+# ---------------------------------------------------------------------------------------
+# bash profile file for configuring the shell's environment. 
+#
+# Author:   Dennis Coldwell (@dencold)
+#
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
