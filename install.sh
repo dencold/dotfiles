@@ -50,7 +50,7 @@ mkdir -p $HOME/src $HOME/bin
 # -installs .profile
 #-----------------------------------------------------------------------------------
 echo "- Installing .profile"
-cp -p bash/profile $HOME/.profile
+cp -p .profile $HOME/.profile
 ln -s $HOME/.profile $HOME/.bashrc
 cp -p .inputrc $HOME/.inputrc
 
@@ -75,8 +75,8 @@ git submodule update --init --recursive vim/bundle
 # now install our vim directory
 cp -rp vim $HOME/.vim
 
-# finally, symlink our vimrc file to .vimrc
-ln -s $HOME/.vim/vimrc $HOME/.vimrc
+# finally, copy .vimrc
+cp -p .vimrc $HOME/.vimrc
 
 echo
 echo "!! FINISHED - dotfiles install !!"
