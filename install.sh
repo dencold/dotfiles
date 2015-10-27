@@ -36,6 +36,7 @@ OS_TYPE=`uname`
 echo "- Cleaning any previous dotfiles"
 rm -f $HOME/.vimrc; rm -rf $HOME/.vim;
 rm -f $HOME/.profile; rm -f $HOME/.bashrc;
+rm -f $HOME/.inputrc
 
 #-----------------------------------------------------------------------------------
 # Directory Initialization
@@ -51,6 +52,7 @@ mkdir -p $HOME/src $HOME/bin
 echo "- Installing .profile"
 cp -p bash/profile $HOME/.profile
 ln -s $HOME/.profile $HOME/.bashrc
+cp -p .inputrc $HOME/.inputrc
 
 #-----------------------------------------------------------------------------------
 # vim
