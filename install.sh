@@ -35,7 +35,7 @@ OS_TYPE=`uname`
 #-----------------------------------------------------------------------------------
 echo "- Cleaning any previous dotfiles"
 rm -f $HOME/.vimrc; rm -rf $HOME/.vim;
-rm -f $HOME/.profile; rm -f $HOME/.bashrc;
+rm -f $HOME/.bash_profile; rm -f $HOME/.bashrc;
 rm -f $HOME/.inputrc
 
 #-----------------------------------------------------------------------------------
@@ -50,8 +50,8 @@ mkdir -p $HOME/src $HOME/bin
 # -installs .profile
 #-----------------------------------------------------------------------------------
 echo "- Installing .profile"
-cp -p .profile $HOME/.profile
-ln -s $HOME/.profile $HOME/.bashrc
+cp -p .bashrc $HOME/.bashrc
+cp -p .bash_profile $HOME/.bash_profile
 cp -p .inputrc $HOME/.inputrc
 
 #-----------------------------------------------------------------------------------

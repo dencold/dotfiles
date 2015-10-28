@@ -4,9 +4,6 @@
 # Author:   Dennis Coldwell (@dencold)
 #
 
-# If not running interactively, don't do anything
-[ -z "$PS1" ] && return
-
 OS_TYPE=`uname`
 export EDITOR=vim
 export GIT_EDITOR=vim
