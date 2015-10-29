@@ -11,6 +11,15 @@ export GIT_EDITOR=vim
 # histcontrol will ignore spaces AND ignore duplicates
 HISTCONTROL=ignoreboth
 
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob;
+
+# Append to the Bash history file, rather than overwriting it
+shopt -s histappend;
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell;
+
 export GOPATH=$HOME
 export GOBIN=$HOME/bin
 export PATH=$PATH:$HOME/bin
