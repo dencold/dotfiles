@@ -39,8 +39,8 @@ export GOBIN=$HOME/bin
 export PATH=$PATH:$HOME/bin
 
 # alias setup
+# TODO these need to be switched to OS specific variants
 if [[ "$OS_TYPE" == 'Darwin' ]]; then
-    alias vim='vimr'
     alias ls='ls -G'
 
 elif [[ "$OS_TYPE" == 'Linux' ]]; then
