@@ -50,7 +50,3 @@ cp -rp ../vim $HOME/.vim
 # finally, copy .vimrc
 cp -p .vimrc $HOME/.vimrc
 
-echo
-echo "!! FINISHED - dotfiles install !!"
-echo "- reminder that you may need to source your new profile"
-echo
