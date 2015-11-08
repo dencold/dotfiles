@@ -33,20 +33,6 @@ cp -p .bashrc $HOME/.bashrc
 cp -p .bash_profile $HOME/.bash_profile
 cp -p .inputrc $HOME/.inputrc
 
-#-----------------------------------------------------------------------------------
-# vim
-# - installs vim dotfiles & associated plugins
-#-----------------------------------------------------------------------------------
-echo "- Installing vim dotfiles"
-
-# first we initialize the plugin submodules, see the README for this repository
-# for more background on what is happening here.
-git submodule init ../vim/bundle
-git submodule update --init --recursive ../vim/bundle
-
-# now install our vim directory
-cp -rp ../vim $HOME/.vim
-
 # finally, copy .vimrc
 cp -p .vimrc $HOME/.vimrc
 

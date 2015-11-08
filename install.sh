@@ -36,6 +36,20 @@ elif [[ "OS_TYPE" == 'Linux' ]]; then
         ./linux/install.sh
 fi
 
+#-----------------------------------------------------------------------------------
+# vim
+# - installs vim dotfiles & associated plugins
+#-----------------------------------------------------------------------------------
+echo "- Installing vim dotfiles"
+
+# first we initialize the plugin submodules, see the README for this repository
+# for more background on what is happening here.
+git submodule init vim/bundle
+git submodule update --init --recursive vim/bundle
+
+# now install our vim directory
+cp -rp vim $HOME/.vim
+
 echo
 echo "!! FINISHED - dotfiles install !!"
 echo "- reminder that you may need to source your new profile"
