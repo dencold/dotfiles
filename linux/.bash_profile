@@ -18,7 +18,7 @@
 # Author: Dennis Coldwell (@dencold)
 #
 
-OS_TYPE=`uname`
+export OS_TYPE=`uname`
 export EDITOR=vim
 export GIT_EDITOR=vim
 
@@ -39,14 +39,7 @@ export GOBIN=$HOME/bin
 export PATH=$PATH:$HOME/bin
 
 # alias setup
-# TODO these need to be switched to OS specific variants
-if [[ "$OS_TYPE" == 'Darwin' ]]; then
-    alias ls='ls -G'
-
-elif [[ "$OS_TYPE" == 'Linux' ]]; then
-    alias ls='ls --color'
-fi
-
+alias ls='ls --color'
 alias vi=vim
 
 # if we have setup a .aliases file then load it in, note that this is set
