@@ -1,13 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# ---------------------------------------------------------------------------------------
+# Installation script for dotfiles. This script determines what OS the user is running
+# and calls the appropriate os-specific script in either the osx or linux subdirectories.
+# This script also handles the installation of vim packages which are agnostic to OS 
+# type.
 #
-# File:     install.sh
-# Author:   Dennis Coldwell (@dencold)
-#
-# Description:
-# Simple bash script to install dotfiles for vim/bash/etc. 
-#
-# Usage:
-# $ ./install.sh
+# author: @dencold
 #
 
 echo 
