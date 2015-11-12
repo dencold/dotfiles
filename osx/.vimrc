@@ -51,6 +51,12 @@ set laststatus=2  " required for airplane plugin
 set incsearch     " search as text is entered
 set hlsearch      " highlight
 nnoremap <leader><space> :nohlsearch<CR>
+
+"- Clipboard settings
+" We have to set clipboard to unnamed for OSX access to system clipboard, see:
+" http://stackoverflow.com/questions/677986/vim-copy-selection-to-os-x-clipboard/680271#680271
+set clipboard=unnamed
+
 "{{{ Folding
 "set foldenable    " enable folding
 "set foldlevelstart=10 " open most folds by default
