@@ -135,7 +135,8 @@ inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 " vim-go settings
-let g:go_auto_type_info = 1
+let g:go_auto_type_info = 1 " show the type info for the word under the cursor
+let g:go_fmt_command = "goimports" " format with goimports instead of gofmt
 
 " allows cursor change in tmux mode
 if exists('$TMUX')
