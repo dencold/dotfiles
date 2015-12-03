@@ -30,7 +30,7 @@ OS_TYPE=`uname`
 if [[ "$OS_TYPE" == 'Darwin' ]]; then
         # execute the OSX specific install script
         ./osx/install.sh 
-elif [[ "OS_TYPE" == 'Linux' ]]; then
+elif [[ "$OS_TYPE" == 'Linux' ]]; then
         ./linux/install.sh
 fi
 
