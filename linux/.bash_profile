@@ -48,3 +48,9 @@ if [[ -f $HOME/.aliases ]]; then
     source $HOME/.aliases
 fi
 
+# I like sexy-bash-prompt by twolfson (https://github.com/twolfson/sexy-bash-prompt)
+# source it now...
+if [[ -f $HOME/.bash_prompt ]]; then
+    source $HOME/.bash_prompt
+fi
+
