@@ -54,3 +54,9 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
+# I like sexy-bash-prompt by twolfson (https://github.com/twolfson/sexy-bash-prompt)
+# source it now...
+if [[ -f $HOME/.bash_prompt ]]; then
+    source $HOME/.bash_prompt
+fi
+

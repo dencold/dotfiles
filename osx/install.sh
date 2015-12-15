@@ -14,7 +14,7 @@
 #-----------------------------------------------------------------------------------
 echo "- Cleaning any previous dotfiles"
 rm -f $HOME/.vimrc; rm -rf $HOME/.vim;
-rm -f $HOME/.bash_profile; rm -f $HOME/.bashrc;
+rm -f $HOME/.bash_profile; rm -f $HOME/.bashrc; rm -f $HOME/.bash_prompt
 rm -f $HOME/.inputrc
 
 #-----------------------------------------------------------------------------------
@@ -37,6 +37,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "- Installing .profile"
 cp -p $DIR/.bashrc $HOME/.bashrc
 cp -p $DIR/.bash_profile $HOME/.bash_profile
+cp -p $DIR/.bash_prompt $HOME/.bash_prompt
 cp -p $DIR/.inputrc $HOME/.inputrc
 
 # finally, copy .vimrc
