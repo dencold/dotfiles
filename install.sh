@@ -8,6 +8,10 @@
 # author: @dencold
 #
 
+# Variable setup
+OS_TYPE=`uname`
+
+# Warning message & prompt for users
 echo 
 echo "************************ WARNING - DOTFILES INSTALL ************************ "
 echo 
@@ -25,7 +29,12 @@ then
     exit 0
 fi
 
-OS_TYPE=`uname`
+#-----------------------------------------------------------------------------------
+# Directory Initialization
+# - sets up our required directories
+#-----------------------------------------------------------------------------------
+echo "- Creating initial directories"
+mkdir -p $HOME/src $HOME/bin
 
 if [[ "$OS_TYPE" == 'Darwin' ]]; then
         # execute the OSX specific install script
@@ -38,7 +47,8 @@ fi
 # vim
 # - installs vim dotfiles & associated plugins
 #-----------------------------------------------------------------------------------
-echo "- Installing vim dotfiles"
+echo "- Installing vim directory/plugins"
+rm -rf $HOME/.vim
 
 # first we initialize the plugin submodules, see the README for this repository
 # for more background on what is happening here.
