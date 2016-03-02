@@ -60,3 +60,5 @@ if [[ -f $HOME/.bash_prompt ]]; then
     source $HOME/.bash_prompt
 fi
 
+# setup completion for awscli
+complete -C aws_completer aws
