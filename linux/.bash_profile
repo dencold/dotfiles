@@ -38,10 +38,6 @@ export GOPATH=$HOME
 export GOBIN=$HOME/bin
 export PATH=$PATH:$HOME/bin
 
-# alias setup
-alias ls='ls --color'
-alias vi=vim
-
 # if we have setup a .aliases file then load it in, note that this is set
 # here so that user-defined aliases can take precendence over profile settings
 if [[ -f $HOME/.aliases ]]; then

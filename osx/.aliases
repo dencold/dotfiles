@@ -1,0 +1,7 @@
+# ---------------------------------------------------------------------------------------
+# .aliases is responsible for setting up all aliases for our environment
+#
+# Author: Dennis Coldwell (@dencold)
+#
+alias ls='ls -G'
+alias vi=vim
