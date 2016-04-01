@@ -80,7 +80,7 @@
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
     # remove remote tracking branches with prune
-    dr = "git remote prune origin"
+    dr = "!git remote prune origin"
 
 	# List contributors with number of commits
 	contribs = shortlog --summary --numbered
