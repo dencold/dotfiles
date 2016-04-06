@@ -14,7 +14,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "- Installing profiles"
-for file in .aliases .bashrc .bash_profile .bash_prompt .inputrc; do
+for file in .aliases .bashrc .bash_funcs .bash_profile .bash_prompt .inputrc; do
     cp -p $DIR/$file $HOME/$file;
 done;
 

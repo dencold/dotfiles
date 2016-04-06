@@ -44,6 +44,10 @@ if [[ -f $HOME/.aliases ]]; then
     source $HOME/.aliases
 fi
 
+if [[ -f $HOME/.bash_funcs ]]; then
+    source $HOME/.bash_funcs
+fi
+
 # setup bash completion, needs to be installed via homebrew (see machine-setup repo)
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion

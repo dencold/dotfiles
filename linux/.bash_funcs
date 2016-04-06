@@ -1,0 +1,10 @@
+# ---------------------------------------------------------------------------------------
+# Defines functions that are sourced by our bash profile and available to all terminal
+# clients.
+#
+# Author: Dennis Coldwell (@dencold)
+#
+
+wttr() {
+    curl http://wttr.in/$1
+}
