@@ -5,3 +5,5 @@
 #
 alias ls='ls -G'
 alias vi=vim
+alias uuid=uuidgen
+

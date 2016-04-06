@@ -5,6 +5,13 @@
 # Author: Dennis Coldwell (@dencold)
 #
 
+# get your weather forecast from the command line!
 wttr() {
     curl http://wttr.in/$1
 }
+
+# helpful ip stats
+ipinf() {
+    curl http://ipinfo.io/$1
+}
+
