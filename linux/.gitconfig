@@ -40,8 +40,8 @@
     aliases = "!git config --get-regexp alias"
 
     # shortcut to see all branches
-	b = branch -a
-	branches = branch -a
+    b = branch -avv
+    branches = branch -avv
     
     #
     # Switch to a branch, creating it if necessary
