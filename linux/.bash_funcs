@@ -15,3 +15,6 @@ ipinf() {
     curl http://ipinfo.io/$1
 }
 
+setaws() {
+    export AWS_DEFAULT_PROFILE=$1
+}
