@@ -34,7 +34,7 @@ fi
 # - sets up our required directories
 #-----------------------------------------------------------------------------------
 echo "- Creating initial directories"
-mkdir -p $HOME/src $HOME/bin
+mkdir -p $HOME/src $HOME/bin $HOME/tmp
 
 if [[ "$OS_TYPE" == 'Darwin' ]]; then
         # execute the OSX specific install script
