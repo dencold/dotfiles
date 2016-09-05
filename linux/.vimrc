@@ -47,6 +47,10 @@ set showmatch     " match brackets/parens/etc.
 set laststatus=2  " required for airplane plugin
 "}}}
 
+" clipboard setup
+" allows vim to use the system clipboard for default register
+set clipboard=unnamedplus
+
 "- Search
 set incsearch     " search as text is entered
 set hlsearch      " highlight
