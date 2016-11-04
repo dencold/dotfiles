@@ -18,9 +18,8 @@
 " - l: insert, command-line, regexp-search (and others. Collectively called 'Lang-Arg' pseudo-mode)
 "
 
-" General Settings {{{
+"-- General Settings --
 syntax enable   " enables syntax highlighting
-"set background=dark
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -30,14 +29,11 @@ nnoremap gV `[v`]
 
 " save session
 nnoremap <leader>s :mksession<CR>
-" }}}
-" Spacing {{{
+
+"-- Spacing/UI --
 set tabstop=4     " set 4 spaces per tab
 set softtabstop=4 " set 4 visual spaces per tab
 set expandtab     " tabs become spaces
-"filetype indent on " sets per-filetype spacing options
-" }}}
-" UI options {{{
 set number        " gives us line numbers on side
 set showcmd       " shows us the last command at bottom
 set cursorline    " highlights the current line
@@ -45,22 +41,17 @@ set wildmenu      " command menu autocomplete
 set lazyredraw    " laissez-faire redraw
 set showmatch     " match brackets/parens/etc.
 set laststatus=2  " required for airplane plugin
-"}}}
 
-" clipboard setup
+"-- Clipboard --
 " allows vim to use the system clipboard for default register
 set clipboard=unnamedplus
 
-"- Search
+"-- Search --
 set incsearch     " search as text is entered
 set hlsearch      " highlight
 nnoremap <leader><space> :nohlsearch<CR>
-"{{{ Folding
-"set foldenable    " enable folding
-"set foldlevelstart=10 " open most folds by default
-"set foldmethod=indent " fold based on indent level
-"}}}
-"{{{ Movement
+
+"-- Movement --
 " disable arrow-keys! (help learn hjkl movement)
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -71,15 +62,11 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-" default down/up movement is by visual line
-"nnoremap j gj 
-"nnoremap k gk
-
 " line beginning/end mapped to B & E 
 nnoremap B ^
 nnoremap E $
-"}}}
-"- Leader Shortcuts
+
+"-- Leader Shortcuts --
 
 " '\' is a little too far away, remap to ','
 let mapleader=" "
@@ -87,7 +74,7 @@ let mapleader=" "
 " ESC is a little too far away, remap to jk
 inoremap jk <esc>
 
-"- Extension Settings
+"-- Extension Settings --
 
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
@@ -145,9 +132,10 @@ else
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
+"-- Color Scheme --
 colorscheme spacegray
 
-"- Backups
+"-- Backups --
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
