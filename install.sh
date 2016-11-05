@@ -35,6 +35,7 @@ fi
 #-----------------------------------------------------------------------------------
 echo "- Creating initial directories"
 mkdir -p $HOME/src $HOME/bin $HOME/tmp
+mkdir -p $HOME/.vim/backup $HOME/.vim/swp
 
 if [[ "$OS_TYPE" == 'Darwin' ]]; then
         # execute the OSX specific install script
