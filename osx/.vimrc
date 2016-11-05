@@ -138,8 +138,7 @@ colorscheme spacegray
 
 "-- Backups --
 set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupdir=~/.vim/backup// " where vim puts backups. the // prevents clobbering
+set directory=~/.vim/swp//    " vim swap files (mutex)
 set writebackup
 
