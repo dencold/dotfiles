@@ -1,6 +1,6 @@
 #!/bin/bash
 # Simple bash script to install dotfiles for vim/bash/etc.
-# This script is OSX specific.
+# This script is macOS specific.
 #
 # Usage:
 # $ ./install.sh

@@ -38,7 +38,7 @@ mkdir -p $HOME/src $HOME/bin $HOME/tmp
 
 if [[ "$OS_TYPE" == 'Darwin' ]]; then
         # execute the OSX specific install script
-        ./osx/install.sh 
+        ./macos/install.sh 
 elif [[ "$OS_TYPE" == 'Linux' ]]; then
         ./linux/install.sh
 fi
