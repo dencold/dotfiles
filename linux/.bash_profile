@@ -22,8 +22,22 @@ export OS_TYPE=`uname`
 export EDITOR=vim
 export GIT_EDITOR=vim
 
+# Increase Bash history size. Allow 32³ entries; the default is 500.
+export HISTSIZE='32768';
+export HISTFILESIZE="${HISTSIZE}";
+
 # histcontrol will ignore spaces AND ignore duplicates
 HISTCONTROL=ignoreboth
+
+# Prefer US English and use UTF-8.
+export LANG='en_US.UTF-8';
+export LC_ALL='en_US.UTF-8';
+
+# Highlight section titles in manual pages.
+export LESS_TERMCAP_md="${yellow}";
+
+# Don’t clear the screen after quitting a manual page.
+export MANPAGER='less -X';
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
