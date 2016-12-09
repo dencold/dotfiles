@@ -35,7 +35,6 @@ fi
 #-----------------------------------------------------------------------------------
 echo "- Creating initial directories"
 mkdir -p $HOME/src $HOME/bin $HOME/tmp
-mkdir -p $HOME/.vim/backup $HOME/.vim/swp
 
 if [[ "$OS_TYPE" == 'Darwin' ]]; then
         # execute the OSX specific install script
@@ -58,6 +57,9 @@ git submodule update --init --recursive vim/bundle
 
 # now install our vim directory
 cp -rp vim $HOME/.vim
+
+# create our the directories where backups will go
+mkdir -p $HOME/.vim/backup $HOME/.vim/swp
 
 echo
 echo "!! FINISHED - dotfiles install !!"
