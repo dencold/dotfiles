@@ -132,6 +132,9 @@ else
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
+" vim-markdown settings
+let g:vim_markdown_folding_disabled = 1
+
 "-- Color Scheme --
 colorscheme spacegray
 

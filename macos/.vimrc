@@ -124,6 +124,9 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 let g:go_auto_type_info = 1 " show the type info for the word under the cursor
 let g:go_fmt_command = "goimports" " format with goimports instead of gofmt
 
+" vim-markdown settings
+let g:vim_markdown_folding_disabled = 1
+
 " allows cursor change in tmux mode
 if exists('$TMUX')
     let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
