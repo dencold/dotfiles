@@ -94,7 +94,7 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.so$',
   \ }
 
-" neocomplete settings
+" BEGIN neocomplete settings
 let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
@@ -118,6 +118,10 @@ inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
+
+" turn off completion for markdown
+autocmd FileType markdown NeoCompleteLock
+" END neocomplete settings
 
 " vim-go settings
 let g:go_auto_type_info = 1 " show the type info for the word under the cursor
