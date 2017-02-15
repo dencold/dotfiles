@@ -52,6 +52,10 @@ export GOPATH=$HOME
 export GOBIN=$HOME/bin
 export PATH=$PATH:$HOME/bin
 
+# setup base16 for theming the terminal
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
 # if we have setup a .aliases file then load it in, note that this is set
 # here so that user-defined aliases can take precendence over profile settings
 if [[ -f $HOME/.aliases ]]; then
