@@ -139,8 +139,12 @@ endif
 " vim-markdown settings
 let g:vim_markdown_folding_disabled = 1
 
-"-- Color Scheme --
-colorscheme spacegray
+" base16 theme settings, this will automatically match your vim theme to
+" your shell theme if using base16.
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 "-- Backups --
 set backup
