@@ -1,6 +1,3 @@
-[submodule "vim/bundle/Spacegray.vim"]
-	path = vim/bundle/Spacegray.vim
-	url = https://github.com/ajh17/Spacegray.vim.git
 [submodule "vim/bundle/vim-airline"]
 	path = vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
