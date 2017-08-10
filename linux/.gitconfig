@@ -3,9 +3,10 @@
 # file. 
 #
 [user]
-    
-    name = Dennis Coldwell
-    email = dennis.coldwell@gmail.com
+
+    # these will be automatically replaced if you use install.sh
+    name = GIT_NAME
+    email = GIT_EMAIL
 
 [alias]
 
