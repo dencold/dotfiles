@@ -23,6 +23,17 @@ echo "- Installing vim config"
 cp -p $DIR/.vimrc $HOME/.vimrc
 
 echo "- Installing git config"
+echo ""
+echo "What's your full name (for git purposes)?"
+read full_name
+echo ""
+echo "What's your email address?"
+read email
+
 for file in .gitignore .gitconfig; do
     cp -p $DIR/$file $HOME/$file;
 done;
+
+# replace the placeholders in .gitconfig with user input
+sed -i -e "s/GIT_NAME/$full_name/g" $HOME/.gitconfig
+sed -i -e "s/GIT_EMAIL/$email/g" $HOME/.gitconfig
