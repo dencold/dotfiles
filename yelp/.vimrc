@@ -44,7 +44,8 @@ set laststatus=2  " required for airplane plugin
 
 "-- Clipboard --
 " allows vim to use the system clipboard for default register
-set clipboard=unnamedplus
+" we use osx style 'unnamed' here as we are ssh'ing into yelp hosts thru osx
+set clipboard=unnamed
 
 "-- Search --
 set incsearch     " search as text is entered
