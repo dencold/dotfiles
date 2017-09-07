@@ -81,3 +81,4 @@ fi
 ## YELP Specific
 alias trusty='ssh -A dev16-uswest1cdevc.dev.yelpcorp.com'
 alias xenial='ssh -A xenialdev2-uswest1cdevc.dev.yelpcorp.com'
+alias fixssh='export $(tmux show-environment | grep \^SSH_AUTH_SOCK=)'
