@@ -74,8 +74,8 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 alias vi=vim
 
 # use tmux2 if it exists
-if hash tmux2 2>/dev/null; then
-    alias tmux=tmux2
+if hash agenttmux2 2>/dev/null; then
+    alias tmux=agenttmux2
 fi
 
 ## YELP Specific
