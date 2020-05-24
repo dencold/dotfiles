@@ -31,16 +31,16 @@ nnoremap gV `[v`]
 nnoremap <leader>s :mksession<CR>
 
 "-- Spacing/UI --
-set tabstop=4     " set 4 spaces per tab
-set softtabstop=4 " set 4 visual spaces per tab
-set expandtab     " tabs become spaces
-set number        " gives us line numbers on side
-set showcmd       " shows us the last command at bottom
-set cursorline    " highlights the current line
-set wildmenu      " command menu autocomplete
-set lazyredraw    " laissez-faire redraw
-set showmatch     " match brackets/parens/etc.
-set laststatus=2  " required for airplane plugin
+set tabstop=4             " set 4 spaces per tab
+set softtabstop=4         " set 4 visual spaces per tab
+set expandtab             " tabs become spaces
+set number relativenumber " gives us hybrid line numbers on side
+set showcmd               " shows us the last command at bottom
+set cursorline            " highlights the current line
+set wildmenu              " command menu autocomplete
+set lazyredraw            " laissez-faire redraw
+set showmatch             " match brackets/parens/etc.
+set laststatus=2          " required for airplane plugin
 
 "-- Search --
 set incsearch     " search as text is entered
@@ -74,6 +74,14 @@ let mapleader=" "
 
 " ESC is a little too far away, remap to jk
 inoremap jk <esc>
+
+"-- setting line number modes automatically
+"see: https://jeffkreeftmeijer.com/vim-number/
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
 
 "-- Extension Settings --
 
