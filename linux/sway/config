@@ -123,14 +123,16 @@ set $desk_display DP-2
 set $wksp1 "1"
 set $wksp2 "2"
 set $wksp3 "3"
-set $wksp10 "Scratch"
+set $wksp4 "4"
+set $wksp5 "5"
+set $wksp10 "10"
 
     # Switch to workspace
     bindsym $mod+1 workspace $wksp1
     bindsym $mod+2 workspace $wksp2
     bindsym $mod+3 workspace $wksp3
-    bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
+    bindsym $mod+4 workspace $wksp4
+    bindsym $mod+5 workspace $wksp5
     bindsym $mod+6 workspace number 6
     bindsym $mod+7 workspace number 7
     bindsym $mod+8 workspace number 8
