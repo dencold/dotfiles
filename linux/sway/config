@@ -19,6 +19,7 @@ default_border pixel 2 # disable window titlebar
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod1
+set $option Mod4
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -88,6 +89,9 @@ input type:touchpad {
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
+    # Take a screen capture
+    bindsym $mod+$option+x exec grim -g "$(slurp)" - | wl-copy
+
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 #
@@ -114,11 +118,12 @@ input type:touchpad {
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
-#
-# Workspaces:
+
+#####################################################################
+# Workspaces
 #
 set $lap_display eDP-1
-set $desk_display DP-2
+set $desk_display DP-1
 
 set $wksp1 "1"
 set $wksp2 "2"
@@ -127,35 +132,46 @@ set $wksp4 "4"
 set $wksp5 "5"
 set $wksp10 "10"
 
-    # Switch to workspace
-    bindsym $mod+1 workspace $wksp1
-    bindsym $mod+2 workspace $wksp2
-    bindsym $mod+3 workspace $wksp3
-    bindsym $mod+4 workspace $wksp4
-    bindsym $mod+5 workspace $wksp5
-    bindsym $mod+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace $wksp10
+# Switch to workspace
+bindsym $mod+1 workspace $wksp1
+bindsym $mod+2 workspace $wksp2
+bindsym $mod+3 workspace $wksp3
+bindsym $mod+4 workspace $wksp4
+bindsym $mod+5 workspace $wksp5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace $wksp10
 
-    # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace $wksp1
-    bindsym $mod+Shift+2 move container to workspace $wksp2
-    bindsym $mod+Shift+3 move container to workspace $wksp3
-    bindsym $mod+Shift+4 move container to workspace number 4
-    bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace $wksp10
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $wksp1
+bindsym $mod+Shift+2 move container to workspace $wksp2
+bindsym $mod+Shift+3 move container to workspace $wksp3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace $wksp10
 
-    # Setup workspace monitor configuration
-    workspace $wksp1 output $desk_display
-    workspace $wksp2 output $desk_display
-    workspace $wksp3 output $desk_display
-    workspace $wksp10 output $lap_display
+# Setup workspace monitor configuration
+workspace $wksp1 output $desk_display
+workspace $wksp2 output $desk_display
+workspace $wksp3 output $desk_display
+workspace $wksp10 output $lap_display
+
+# move workspace to specific monitor
+bindsym $mod+y move workspace to output $desk_display
+bindsym $mod+p move workspace to output $lap_display
+
+# application workspace assignment
+assign [class="firefoxdeveloperedition"] workspace $wksp2
+assign [class="Slack"] workspace $wksp5
+assign [class="Google-chrome-beta"] workspace $wksp1
+
+#
 #
 # Layout stuff:
 #
