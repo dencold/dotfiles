@@ -122,8 +122,15 @@ input type:touchpad {
 #####################################################################
 # Workspaces
 #
+# Figure out what displays are available with `swaymsg -t get_outputs`
+# and update below accordingly (use mod+shift+c to reload swayconfig)
 set $lap_display eDP-1
-set $desk_display DP-1
+# set $desk_display DP-1
+set $desk_display DP-2
+
+# move workspace to specific monitor
+bindsym $mod+y move workspace to output $desk_display
+bindsym $mod+p move workspace to output $lap_display
 
 set $wksp1 "1"
 set $wksp2 "2"
@@ -161,10 +168,6 @@ workspace $wksp1 output $desk_display
 workspace $wksp2 output $desk_display
 workspace $wksp3 output $desk_display
 workspace $wksp10 output $lap_display
-
-# move workspace to specific monitor
-bindsym $mod+y move workspace to output $desk_display
-bindsym $mod+p move workspace to output $lap_display
 
 # application workspace assignment
 assign [class="firefoxdeveloperedition"] workspace $wksp2
