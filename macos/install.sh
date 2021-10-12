@@ -8,7 +8,7 @@
 echo
 echo "************************ WARNING - DOTFILES INSTALL ************************ "
 echo
-echo "   Running this script will replace your dotfiles (.vimrc/.bashrc/etc.)   "
+echo "   Running this script will replace your dotfiles (.vimrc/.zshrc/etc.)   "
 echo "   and any associated config directories (such as .vim) "
 echo "   Back up previous versions if they are important to you. "
 echo ""
@@ -34,10 +34,8 @@ mkdir -p $HOME/src $HOME/bin $HOME/tmp
 # http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-echo "- Installing profiles"
-for file in .aliases .bashrc .bash_funcs .bash_profile .bash_prompt .inputrc .tmux.conf; do
-    cp -p $DIR/$file $HOME/$file;
-done;
+echo "- Installing zsh profile"
+cp -p $DIR/.zshrc $HOME/.zshrc
 
 # finally, copy .vimrc
 echo "- Installing vim config"
