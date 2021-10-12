@@ -54,6 +54,20 @@ ipinfo() {
     curl http://ipinfo.io/$1
 }
 
+# ---------------------------------------------------------------------------------------
+# Tab Completion!
+# autoload compinit is required to get tab completion going
+autoload -Uz compinit && compinit 
+
+# note that zsh tab completion is super archaic and confusing, if you want to see an
+# example of an interface that goes waaay too far into the weeds, try running compinstall
+# sometime. YIKES.
+# lucky for us, we have fzf to save the day. We'll replace zsh tab completion with fzf
+# see this repo for all the details: https://github.com/Aloxaf/fzf-tab
+# (note that you need to have fzf installed and cloned this directory into the ZDOTDIR
+[ -f $ZDOTDIR/.fzf.zsh ] && source $ZDOTDIR/.fzf.zsh
+[ -f $ZDOTDIR/fzf-tab/fzf-tab.plugin.zsh ] && source $ZDOTDIR/fzf-tab/fzf-tab.plugin.zsh
+
 # BEGIN FIN RECOMMENDS (added by fin/wre-setup/setup_shell_profile.py)
 export REDFIN_MAIN=$HOME/code/main
 eval "$($HOME/code/fin/bin/fin init -)"

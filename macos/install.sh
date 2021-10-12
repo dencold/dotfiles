@@ -27,7 +27,7 @@ fi
 # - sets up our required directories
 #-----------------------------------------------------------------------------------
 echo "- Creating initial directories"
-mkdir -p $HOME/src $HOME/bin $HOME/tmp
+mkdir -p $HOME/src $HOME/bin $HOME/tmp $HOME/.zsh
 
 # figure out what directory we are in. This script is called from the main 
 # install.sh in the root directory (dotfiles). This SO article is *very* helpful:
@@ -36,6 +36,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "- Installing zsh profile"
 cp -p $DIR/.zshrc $HOME/.zshrc
+cp -p $DIR/.fzf.zsh $HOME/.zsh/.fzf.zsh
 
 # finally, copy .vimrc
 echo "- Installing vim config"
