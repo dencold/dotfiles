@@ -31,6 +31,9 @@ export HISTSIZE=2000
 
 # ---------------------------------------------------------------------------------------
 # Setup the powerlevel10k theme
+# IMPORTANT NOTE! Make sure to change the Color Preset on iterm2 to use 
+# "Solarized Dark" to make this look really nice. You have to go to "colors"
+# tab within the Profile setting.
 source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zsh/.zshrc.
@@ -54,6 +57,8 @@ alias h="history"
 alias j="jobs"
 alias vi="vim"
 alias sudo="sudo "
+alias ls="ls -G "
+alias ll="ls -altr"
 
 # ---------------------------------------------------------------------------------------
 # Set our functions
