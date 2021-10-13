@@ -30,6 +30,20 @@ export SAVEHIST=5000
 export HISTSIZE=2000
 
 # ---------------------------------------------------------------------------------------
+# Setup the powerlevel10k theme
+source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
+[[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
+
+# ---------------------------------------------------------------------------------------
 # Setup our aliases
 alias d="cd ~/GDrive"
 alias dl="cd ~/Downloads"
@@ -57,7 +71,7 @@ ipinfo() {
 # ---------------------------------------------------------------------------------------
 # Tab Completion!
 # autoload compinit is required to get tab completion going
-autoload -Uz compinit && compinit 
+autoload -Uz compinit && compinit
 
 # note that zsh tab completion is super archaic and confusing, if you want to see an
 # example of an interface that goes waaay too far into the weeds, try running compinstall
