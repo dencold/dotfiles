@@ -20,7 +20,6 @@
 
 "-- General Settings --
 syntax enable   " enables syntax highlighting
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
