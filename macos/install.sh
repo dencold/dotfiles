@@ -65,16 +65,15 @@ sed -i -e "s/GIT_EMAIL/$email/g" $HOME/.gitconfig
 echo "- Installing vim directory/plugins"
 rm -rf $HOME/.vim
 
-# first we initialize the plugin submodules, see the README for this repository
-# for more background on what is happening here.
-git submodule init ../vim/bundle
-git submodule update --init --recursive ../vim/bundle
+# create our directory structure
+for d in backup swp pack/plugins/start pack/plugins/opt; do
+    mkdir -p $HOME/.vim/$d
+done;
 
-# now install our vim directory
-cp -rp ../vim $HOME/.vim
+# install vim packages
+git clone https://github.com/bling/vim-airline $HOME/.vim/pack/plugins/start/
 
 # create our the directories where backups will go
-mkdir -p $HOME/.vim/backup $HOME/.vim/swp
 
 echo
 echo "!! FINISHED - dotfiles install !!"
