@@ -38,10 +38,6 @@ echo "- Installing zsh profile"
 cp -p $DIR/.zshrc $HOME/.zshrc
 cp -p $DIR/.fzf.zsh $HOME/.zsh/.fzf.zsh
 
-# finally, copy .vimrc
-echo "- Installing vim config"
-cp -p $DIR/.vimrc $HOME/.vimrc
-
 echo "- Installing git config"
 echo ""
 echo "What's your full name (for git purposes)?"
@@ -71,9 +67,11 @@ for d in backup swp pack/plugins/start pack/plugins/opt; do
 done;
 
 # install vim packages
-git clone https://github.com/bling/vim-airline $HOME/.vim/pack/plugins/start/
+git clone https://github.com/bling/vim-airline $HOME/.vim/pack/plugins/start/vim-airline
 
-# create our the directories where backups will go
+# finally, copy .vimrc
+echo "- Installing vim config"
+cp -p $DIR/.vimrc $HOME/.vimrc
 
 echo
 echo "!! FINISHED - dotfiles install !!"
