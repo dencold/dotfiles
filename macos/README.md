@@ -62,7 +62,7 @@ That should do the work to get your system setup.
 
 Finally, we're at the point to install all our dotfiles. We'll use the `install.sh` script which is in charge of deploying all our dotfiles as symlinks into the right locations on the filesystem. It's like [GNU stow]([url](https://www.gnu.org/software/stow/)) but simpler and more explicit. Using symlinks has the benefit of easily changing our settings and have them take effect immediately, and still can be committed to git once you are happy with the changes. Run the following command in the `macos` subdir of this repository:
 ```
-./install.sh
+./install.zsh
 ```
 
 ## Fin
