@@ -10,6 +10,7 @@ If you have a new machine that you are ready to deploy your environment to, here
 
 1. Install git and clone this repository.
 2. cd into the subdir of the deploy target (e.g. `macos`)
-3. Install nix and run the build steps from the `nix` subdirectory.
-4. Run the `install.sh` script to put all your dotfiles in place.
-5. Celebrate your beautiful setup 🎉
+3. Remember to check for the specific instructions in the subdirs `README.md` file.
+4. Install nix and run the build steps from the `nix` subdirectory.
+5. Run the `install.sh` script to put all your dotfiles in place.
+6. Celebrate your beautiful setup 🎉
