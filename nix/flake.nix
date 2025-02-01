@@ -19,9 +19,17 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
+	  pkgs.aerospace
           pkgs.alacritty
           pkgs.neovim
         ];
+
+      # setup macos system configuration
+      system.defaults = {
+        dock.autohide = true;
+        dock.expose-group-apps = true;
+	finder.FXPreferredViewStyle = "clmv";
+      };
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
