@@ -9,7 +9,9 @@ Setting up a fresh install on your macos device. You've come to the right place.
 
 Unfortunately macos still doesn't have `git` installed by default as of the Sequoia release (2024). You'll want to get it by running Xcode Command Line Tools. Run the following command in your terminal:
 
-`$ xcode-select --install`
+```
+xcode-select --install
+```
 
 You should see a mac prompt popup:
 ![image](https://github.com/user-attachments/assets/8cb94071-b778-4d36-a199-a6e8627e0d0a)
@@ -23,7 +25,7 @@ scutil --set ComputerName "your-chosen-name"
 scutil --set LocalHostName "your-chosen-name"
 ```
 
-Next you'll need to get your ssh keys generated and added to github, the best resource for this is off of Github's official docs:
+Finally, you'll need to get your ssh keys generated and added to github, the best resource for this is off of Github's official docs:
 
 - [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 - [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
