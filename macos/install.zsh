@@ -7,24 +7,22 @@
 # create any required directories
 mkdir -p $HOME/.config
 
-echo "- Installing dotfiles via symlinks"
-
 # figure out what directory the script is located in, see:
 # https://unix.stackexchange.com/questions/76505/unix-portable-way-to-get-scripts-absolute-path-in-zsh
 DIR=${0:a:h}
 
-echo "- Installing zsh"
-ln -s $DIR/zsh/.zshrc $HOME/.zshrc
+# A note on ln flags, we are using -svnf for the following reasons:
+# -s creates the symbolic link
+# -v turns on verbose mode so we can get output when we run the script
+# -n makes it so we don't follow a symlink if it is a directory
+# -f if target file already exists unlink so link can occur
 
-echo "- Installing git"
-ln -s $DIR/git/.gitignore $HOME/.gitignore
-ln -s $DIR/git/.gitconfig $HOME/.gitconfig
-
-echo "- Installing aerospace"
-ln -s $DIR/aerospace $HOME/.config/aerospace
-
-echo "- Installing nix"
-ln -s $DIR/nix $HOME/nix
+echo "- Installing dotfiles via symlinks"
+ln -svnf $DIR/zsh/.zshrc $HOME/.zshrc
+ln -svnf $DIR/git/.gitignore $HOME/.gitignore
+ln -svnf $DIR/git/.gitconfig $HOME/.gitconfig
+ln -svnf $DIR/aerospace $HOME/.config/aerospace
+ln -svnf $DIR/nix $HOME/nix
 
 echo
 echo "!! FINISHED - dotfiles install !!"
