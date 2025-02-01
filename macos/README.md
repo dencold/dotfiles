@@ -39,3 +39,32 @@ git clone git@github.com:dencold/dotfiles.git $HOME/src/github.com/dencold/dotfi
 
 ## Installing packages with nix
 
+I use [nix](https://nixos.org/) to handle cross-platform package management. I use it to install both unix packages like neovim as well as gui apps like alacritty and even mac specific programs like aerospace. It also allows us to configure system preferences like Dock behavior and autolock timings. First step is to get it installed. I like [this guide](https://nixcademy.com/posts/nix-on-macos/), here are the pertinent steps:
+
+Run this shell command:
+```
+curl \
+  --proto '=https' \
+  --tlsv1.2 \
+  -sSf \
+  -L https://install.determinate.systems/nix \
+  | sh -s -- install
+```
+
+Next cd into the `nix` subdirectory and run the following command:
+```
+nix run nix-darwin -- switch --flake .#macos
+```
+
+That should do the work to get your system setup.
+
+## Installing dotfiles
+
+Finally, we're at the point to install all our dotfiles. We'll use the `install.sh` script which is in charge of deploying all our dotfiles as symlinks into the right locations on the filesystem. It's like [GNU stow]([url](https://www.gnu.org/software/stow/)) but simpler and more explicit. Using symlinks has the benefit of easily changing our settings and have them take effect immediately, and still can be committed to git once you are happy with the changes. Run the following command in the `macos` subdir of this repository:
+```
+./install.sh
+```
+
+## Fin
+
+That should be all you need to do! Exit out of your terminal and restart to see the changes take effect \o/
