@@ -50,8 +50,8 @@
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#rylos
-    darwinConfigurations."rylos" = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#macos
+    darwinConfigurations."macos" = nix-darwin.lib.darwinSystem {
       modules = 
         [ 
           configuration
