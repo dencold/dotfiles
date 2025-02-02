@@ -1,5 +1,5 @@
 {
-  description = "rylos nix-darwin system flake";
+  description = "macos nix-darwin system flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -19,8 +19,9 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
-	  pkgs.aerospace
+          pkgs.aerospace
           pkgs.alacritty
+          pkgs.git
           pkgs.neovim
         ];
 
@@ -47,6 +48,7 @@
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
     };
+
   in
   {
     # Build darwin flake using:
