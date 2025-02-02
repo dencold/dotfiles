@@ -6,9 +6,11 @@
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     mac-app-util.url = "github:hraban/mac-app-util";
+    # temporary pin for espanso build failure see: github.com/NixOS/nixpkgs/issues/368673
+    nixpkgs-espanso-pinned.url = "nixpkgs/3f316d2a50699a78afe5e77ca486ad553169061e";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, mac-app-util }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, mac-app-util, nixpkgs-espanso-pinned }:
   let
     configuration = { pkgs, config, ... }: {
 
@@ -23,6 +25,7 @@
           pkgs.alacritty
           pkgs.git
           pkgs.neovim
+          inputs.nixpkgs-espanso-pinned.legacyPackages.aarch64-darwin.espanso
         ];
 
       # setup macos system configuration

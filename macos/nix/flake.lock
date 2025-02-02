@@ -111,6 +111,21 @@
         "type": "github"
       }
     },
+    "nixpkgs-espanso-pinned": {
+      "locked": {
+        "lastModified": 1716358718,
+        "narHash": "sha256-NQbegJb2ZZnAqp2EJhWwTf6DrZXSpA6xZCEq+RGV1r0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3f316d2a50699a78afe5e77ca486ad553169061e",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "rev": "3f316d2a50699a78afe5e77ca486ad553169061e",
+        "type": "indirect"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1737942377,
@@ -131,7 +146,8 @@
       "inputs": {
         "mac-app-util": "mac-app-util",
         "nix-darwin": "nix-darwin",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "nixpkgs-espanso-pinned": "nixpkgs-espanso-pinned"
       }
     },
     "systems": {
