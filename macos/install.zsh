@@ -23,6 +23,7 @@ ln -svnf $DIR/git/.gitignore $HOME/.gitignore
 ln -svnf $DIR/git/.gitconfig $HOME/.gitconfig
 ln -svnf $DIR/aerospace $HOME/.config/aerospace
 ln -svnf $DIR/nix $HOME/nix
+ln -svnf $DIR/alacritty $HOME/.config/alacritty
 
 echo
 echo "!! FINISHED - dotfiles install !!"

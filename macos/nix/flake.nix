@@ -35,6 +35,11 @@
 	finder.FXPreferredViewStyle = "clmv";
       };
 
+      # install fonts
+      fonts.packages = with pkgs; [
+        meslo-lgs-nf
+      ];
+
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
