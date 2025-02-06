@@ -19,6 +19,7 @@ DIR=${0:a:h}
 
 echo "- Installing dotfiles via symlinks"
 ln -svnf $DIR/zsh/.zshrc $HOME/.zshrc
+ln -svnf $DIR/zsh/.p10k.zsh $HOME/.p10k.zsh
 ln -svnf $DIR/git/.gitignore $HOME/.gitignore
 ln -svnf $DIR/git/.gitconfig $HOME/.gitconfig
 ln -svnf $DIR/aerospace $HOME/.config/aerospace

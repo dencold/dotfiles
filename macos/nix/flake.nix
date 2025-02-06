@@ -25,6 +25,7 @@
           pkgs.alacritty
           pkgs.git
           pkgs.neovim
+          pkgs.zsh-powerlevel10k
           inputs.nixpkgs-espanso-pinned.legacyPackages.aarch64-darwin.espanso
         ];
 
@@ -45,6 +46,7 @@
 
       # Enable alternative shell support in nix-darwin.
       programs.zsh.enable = true;
+      programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
