@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # ---------------------------------------------------------------------------------------
 # My zsh profile
 #
@@ -32,24 +25,6 @@ setopt CORRECT_ALL
 export HISTFILE=$HOME/.zsh_history
 export SAVEHIST=5000
 export HISTSIZE=2000
-
-### [dc 2025-02-01] Commenting out for now, may look to remove/handle thru nix 
-# ---------------------------------------------------------------------------------------
-# Setup the powerlevel10k theme
-# IMPORTANT NOTE! Make sure to change the Color Preset on iterm2 to use 
-# "Solarized Dark" to make this look really nice. You have to go to "colors"
-# tab within the Profile setting.
-# source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-
-# To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
-# [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
 
 # ---------------------------------------------------------------------------------------
 # Setup our aliases
@@ -93,6 +68,3 @@ autoload -Uz compinit && compinit
 # (note that you need to have fzf installed and cloned this directory into the ZDOTDIR
 # [ -f $ZDOTDIR/.fzf.zsh ] && source $ZDOTDIR/.fzf.zsh
 # [ -f $ZDOTDIR/fzf-tab/fzf-tab.plugin.zsh ] && source $ZDOTDIR/fzf-tab/fzf-tab.plugin.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
