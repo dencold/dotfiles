@@ -8,3 +8,20 @@
 
 # set ghostty's visual theme
 theme = Catppuccin Frappe
+
+# set a more comfortable window padding, so output isn't always pinned to the bottom
+# some notes from the docs:
+#
+# Window padding. This applies padding between the terminal cells left and right
+# (padding-x) the top and bottom (padding-y)window borders. The value is in points,
+# meaning that it will be scaled appropriately for screen DPI.
+# To set a different top and bottom padding, specify two numerical values separated
+# by a comma. For example, window-padding-y = 2,4 will set the top padding to 2 and
+# the bottom padding to 4. If you want to set both paddings to the same value, you
+# can use a single value. For example, window-padding-y = 2 will set both paddings to 2.
+# Changing this configuration at runtime will only affect new terminals,
+# i.e. new windows, tabs, etc.
+window-padding-x = 20
+window-padding-y = 10,100
+window-padding-balance = false
+window-padding-color = extend
