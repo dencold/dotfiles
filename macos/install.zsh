@@ -23,6 +23,7 @@ ln -svnf $DIR/zsh/.zshrc $HOME/.zshrc
 ln -svnf $DIR/git/.gitignore $HOME/.gitignore
 ln -svnf $DIR/git/.gitconfig $HOME/.gitconfig
 ln -svnf $DIR/aerospace $HOME/.config/aerospace
+ln -svnf $DIR/ghostty $HOME/.config/ghostty
 
 echo
 echo "!! FINISHED - dotfiles install !!"
