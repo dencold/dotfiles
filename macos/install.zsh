@@ -1,6 +1,7 @@
 #!/bin/zsh
 # Simple zsh script to install dotfiles for macos-based systems.
 #
+# Note that the script is idempotent and safe to run multiple times.
 # author: @dencold
 #
 
@@ -23,8 +24,6 @@ ln -svnf $DIR/zsh/.p10k.zsh $HOME/.p10k.zsh
 ln -svnf $DIR/git/.gitignore $HOME/.gitignore
 ln -svnf $DIR/git/.gitconfig $HOME/.gitconfig
 ln -svnf $DIR/aerospace $HOME/.config/aerospace
-ln -svnf $DIR/nix $HOME/nix
-ln -svnf $DIR/alacritty $HOME/.config/alacritty
 
 echo
 echo "!! FINISHED - dotfiles install !!"
