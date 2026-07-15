@@ -68,3 +68,9 @@ autoload -Uz compinit && compinit
 # (note that you need to have fzf installed and cloned this directory into the ZDOTDIR
 # [ -f $ZDOTDIR/.fzf.zsh ] && source $ZDOTDIR/.fzf.zsh
 # [ -f $ZDOTDIR/fzf-tab/fzf-tab.plugin.zsh ] && source $ZDOTDIR/fzf-tab/fzf-tab.plugin.zsh
+
+# ---------------------------------------------------------------------------------------
+# Make the terminal beautiful with starship
+# https://starship.rs/
+# (note that it needs to be installed via homebrew)
+eval "$(starship init zsh)"
