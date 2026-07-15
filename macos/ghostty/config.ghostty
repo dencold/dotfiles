@@ -1,0 +1,10 @@
+# ---------------------------------------------------------------------------------------
+# My ghostty configuration
+#
+# https://ghostty.org/
+#
+# Author: Dennis Coldwell (@dencold)
+#
+
+# set ghostty's visual theme
+theme = Catppuccin Frappe
