@@ -1,0 +1,10 @@
+# ---------------------------------------------------------------------------------------
+# My starship configuration
+#
+# https://starship.rs/
+#
+# Author: Dennis Coldwell (@dencold)
+#
+
+# default behavior is to add a newline after the prompt, which I don't prefer
+add_newline = false
