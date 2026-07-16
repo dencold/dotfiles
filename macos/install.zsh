@@ -24,6 +24,7 @@ ln -svnf $DIR/git/.gitignore $HOME/.gitignore
 ln -svnf $DIR/git/.gitconfig $HOME/.gitconfig
 ln -svnf $DIR/aerospace $HOME/.config/aerospace
 ln -svnf $DIR/ghostty $HOME/.config/ghostty
+ln -svnf $DIR/starship/starship.toml $HOME/.config/starship.toml
 
 echo
 echo "!! FINISHED - dotfiles install !!"

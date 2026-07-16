@@ -8,7 +8,6 @@
 #
 
 # Set our zsh options
-setopt AUTO_CD                  # automatically change dirs without explit cd
 setopt NO_CASE_GLOB             # make globbing case-insensitive
 setopt EXTENDED_HISTORY         # add extra helpful data like timestamps in hist
 setopt SHARE_HISTORY            # share history across multiple terminal sessions
@@ -25,6 +24,10 @@ setopt CORRECT_ALL
 export HISTFILE=$HOME/.zsh_history
 export SAVEHIST=5000
 export HISTSIZE=2000
+
+# ---------------------------------------------------------------------------------------
+# Path settings
+export PATH=$HOME/bin:$PATH
 
 # ---------------------------------------------------------------------------------------
 # Setup our aliases
@@ -74,3 +77,9 @@ autoload -Uz compinit && compinit
 # https://starship.rs/
 # (note that it needs to be installed via homebrew)
 eval "$(starship init zsh)"
+
+# ---------------------------------------------------------------------------------------
+# Claude code settings
+# Because I've installed the Claude CLI via homebrew, this env var enables auto-update
+# of the CLI
+export CLAUDE_CODE_PACKAGE_MANAGER_AUTO_UPDATE=1
