@@ -18,7 +18,11 @@ config-version = 2
 
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+# dc: forcing tile layout for workspace 1, there seems to be an open
+# bug around this: https://github.com/nikitabobko/AeroSpace/issues/568
+after-startup-command = [
+  'workspace 1', 'layout tiles',
+]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -228,3 +232,36 @@ gaps.outer.right =      5
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
+
+# setup default space to load into when a new app is launched
+[[on-window-detected]]
+if.app-name-regex-substring = 'Chrome'
+run = ['layout tiling', 'move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Claude'
+run = ['layout tiling', 'move-node-to-workspace A']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Zed|Ghostty'
+run = ['layout tiling', 'move-node-to-workspace D']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Gmail'
+run = ['layout tiling', 'move-node-to-workspace E']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Pocket Casts|Youtube Music'
+run = ['layout tiling', 'move-node-to-workspace M']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'obsidian'
+run = ['layout tiling', 'move-node-to-workspace N']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Whatsapp|Messages'
+run = ['layout tiling', 'move-node-to-workspace W']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'sunsama|Google Calendar'
+run = ['layout tiling', 'move-node-to-workspace X']
