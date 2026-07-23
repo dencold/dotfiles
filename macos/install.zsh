@@ -26,6 +26,17 @@ ln -svnf $DIR/aerospace $HOME/.config/aerospace
 ln -svnf $DIR/ghostty $HOME/.config/ghostty
 ln -svnf $DIR/starship/starship.toml $HOME/.config/starship.toml
 
+# Espanso unfortunately forces config files to be in $HOME/Library/Application Support
+# We'll replace it with a symlink to the dotfiles location instead
+ESPANSO_TARGET="$HOME/Library/Application Support/espanso"
+
+# if a real (non-symlink) config dir exists, back it up once
+if [ -d "$ESPANSO_TARGET" ] && [ ! -L "$ESPANSO_TARGET" ]; then
+  mv "$ESPANSO_TARGET" "$ESPANSO_TARGET.bak"
+fi
+
+ln -svnf $DIR/espanso "$ESPANSO_TARGET"
+
 echo
 echo "!! FINISHED - dotfiles install !!"
 echo "- reminder that you may need to source your new profile/relaunch your terminal"
