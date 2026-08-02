@@ -34,6 +34,10 @@ export PATH=$HOME/bin:$PATH
 typeset -aU path    # dedupe step
 
 # ---------------------------------------------------------------------------------------
+# Shell env variables
+export GITPRJ="$HOME/src/github.com/dencold"
+
+# ---------------------------------------------------------------------------------------
 # Setup our aliases
 alias d="cd ~/GDrive"
 alias dl="cd ~/Downloads"
@@ -59,6 +63,25 @@ weather() {
 ## helpful ip stats
 ipinfo() {
     curl http://ipinfo.io/$1
+}
+
+## Homebrew maintenance helpers
+# this function updates homebrew itself and lists outdated formulae/casks
+# nothing is actually upgraded here, that's done by brup
+brchk() {
+  brew update
+  echo "── Formulae ──"
+  brew outdated
+  echo "── Casks ──"
+  brew outdated --cask
+}
+
+# this function upgrades outdated formulae/casks and saves the updated Brewfile
+# tracked by git so we stay in sync.
+brup() {
+  brew upgrade \
+    && brew bundle dump --file="$GITPRJ/dotfiles/macos/homebrew/Brewfile" --force \
+    && brew cleanup
 }
 
 # ---------------------------------------------------------------------------------------

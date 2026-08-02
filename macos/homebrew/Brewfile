@@ -1,0 +1,15 @@
+tap "nikitabobko/tap"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.14"
+# Cross-shell prompt for astronauts
+brew "starship"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "nikitabobko/tap/aerospace", trusted: true
+# Terminal-based AI coding assistant
+cask "claude-code"
+# Cross-platform Text Expander written in Rust
+cask "espanso"
+# Screen colour temperature controller
+cask "flux-app"
+cask "font-hack-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
