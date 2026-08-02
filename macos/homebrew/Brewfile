@@ -13,3 +13,5 @@ cask "espanso"
 cask "flux-app"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
+# Menu bar manager
+cask "thaw"
