@@ -45,7 +45,7 @@ matches:
   - trigger: ";thu"
     replace: "👍"
 
-  - trigger: ";hif"
+  - trigger: ";rai"
     replace: "🙌"
 
   - trigger: ";lol"
