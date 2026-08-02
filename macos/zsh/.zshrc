@@ -74,6 +74,11 @@ brchk() {
   brew outdated
   echo "── Casks ──"
   brew outdated --cask
+
+  echo "── Brewfile drift ──"
+    if ! brew bundle check --file="$GITPRJ/dotfiles/macos/homebrew/Brewfile" --verbose; then
+      echo "Drift detected — run 'brup' to sync your Brewfile."
+    fi
 }
 
 # this function upgrades outdated formulae/casks and saves the updated Brewfile
