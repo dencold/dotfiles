@@ -66,8 +66,9 @@ ipinfo() {
 }
 
 ## Homebrew maintenance helpers
-# this function updates homebrew itself and lists outdated formulae/casks
-# nothing is actually upgraded here, that's done by brup
+# Homebrew maintenance helpers
+
+# Checks for outdated formulae/casks and Brewfile drift (installed vs. tracked).
 brchk() {
   brew update
   echo "── Formulae ──"
@@ -76,17 +77,59 @@ brchk() {
   brew outdated --cask
 
   echo "── Brewfile drift ──"
-    if ! brew bundle check --file="$GITPRJ/dotfiles/macos/homebrew/Brewfile" --verbose; then
-      echo "Drift detected — run 'brup' to sync your Brewfile."
-    fi
+  local brewfile="$GITPRJ/dotfiles/macos/homebrew/Brewfile"
+  local missing_from_system extra_installed
+
+  missing_from_system=$(brew bundle check --file="$brewfile" 2>&1)
+  extra_installed=$(brew bundle cleanup --file="$brewfile" 2>&1 \
+    | grep -v "Run \`brew bundle cleanup --force\`")
+
+  if [[ "$missing_from_system" != *"satisfied"* ]] || [[ -n "$extra_installed" ]]; then
+    echo "$missing_from_system"
+    [[ -n "$extra_installed" ]] && echo "Installed but not in Brewfile:" && echo "$extra_installed"
+    echo "Drift detected — run 'brup' to sync your Brewfile."
+  else
+    echo "No drift."
+  fi
 }
 
-# this function upgrades outdated formulae/casks and saves the updated Brewfile
-# tracked by git so we stay in sync.
+# Upgrades all formulae/casks, syncs the Brewfile, and cleans up old versions.
 brup() {
   brew upgrade \
     && brew bundle dump --file="$GITPRJ/dotfiles/macos/homebrew/Brewfile" --force \
     && brew cleanup
+}
+
+# Installs a package by name, trying formula first then falling back to cask.
+brin() {
+  if [ -z "$1" ]; then
+    echo "Usage: brin <package-name>"
+    return 1
+  fi
+
+  if brew install "$1"; then
+    return 0
+  fi
+
+  echo "Formula install failed, trying as a cask..."
+  brew install --cask "$1"
+}
+
+# Uninstalls a package by name, detecting whether it's a formula or cask.
+brrm() {
+  if [ -z "$1" ]; then
+    echo "Usage: brrm <package-name>"
+    return 1
+  fi
+
+  if brew list --formula "$1" &>/dev/null; then
+    brew uninstall "$1"
+  elif brew list --cask "$1" &>/dev/null; then
+    brew uninstall --cask "$1"
+  else
+    echo "'$1' is not installed (formula or cask)."
+    return 1
+  fi
 }
 
 # ---------------------------------------------------------------------------------------
