@@ -42,17 +42,23 @@ matches:
   # -------------------------------------------------------------------------------------
   # my custom matches
   #
-  - trigger: ";thu"
+  - trigger: ";th"
     replace: "👍"
 
-  - trigger: ";rai"
+  - trigger: ";ra"
     replace: "🙌"
 
-  - trigger: ";lol"
+  - trigger: ";lo"
     replace: "😂"
 
-  - trigger: ";hrt"
+  - trigger: ";he"
     replace: "❤️"
 
-  - trigger: ";sta"
+  - trigger: ";st"
     replace: "🤩"
+
+  - trigger: ";11"
+    replace: "💯"
+
+  - trigger: ";yu"
+    replace: "😋"
