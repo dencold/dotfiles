@@ -1,4 +1,6 @@
 tap "nikitabobko/tap"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.14"
 # Cross-shell prompt for astronauts
