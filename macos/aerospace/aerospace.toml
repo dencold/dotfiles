@@ -149,6 +149,7 @@ gaps.outer.right =      5
     alt-3 = 'workspace 3'
     alt-4 = 'workspace 4'
     alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
+    alt-b = 'workspace B'
     alt-c = 'workspace C'
     alt-d = 'workspace D'
     alt-e = 'workspace E'
@@ -172,6 +173,7 @@ gaps.outer.right =      5
     alt-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
     alt-shift-4 = ['move-node-to-workspace 4', 'workspace 4']
     alt-shift-a = ['move-node-to-workspace A', 'workspace A']
+    alt-shift-b = ['move-node-to-workspace B', 'workspace B']
     alt-shift-c = ['move-node-to-workspace C', 'workspace C']
     alt-shift-d = ['move-node-to-workspace D', 'workspace D']
     alt-shift-e = ['move-node-to-workspace E', 'workspace E']
@@ -223,6 +225,14 @@ if.app-name-regex-substring = 'Claude'
 run = ['layout tiling', 'move-node-to-workspace A']
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'BambuStudio'
+run = ['layout tiling', 'move-node-to-workspace B']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Whatsapp|Messages'
+run = ['layout tiling', 'move-node-to-workspace C']
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'Zed|Ghostty'
 run = ['layout tiling', 'move-node-to-workspace D']
 
@@ -231,16 +241,16 @@ if.app-name-regex-substring = 'Gmail'
 run = ['layout tiling', 'move-node-to-workspace E']
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'Firefox Developer Edition'
+run = ['layout tiling', 'move-node-to-workspace F']
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'Pocket Casts|Youtube Music'
 run = ['layout tiling', 'move-node-to-workspace M']
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'obsidian'
-run = ['layout tiling', 'move-node-to-workspace N']
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'Whatsapp|Messages'
-run = ['layout tiling', 'move-node-to-workspace C']
+run = ['layout tiling', 'move-node-to-workspace O']
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'sunsama|Google Calendar'
