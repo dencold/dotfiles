@@ -62,3 +62,12 @@ matches:
 
   - trigger: ";yu"
     replace: "😋"
+
+  - trigger: ";bi"
+    replace: "🚴‍♂️"
+
+  - trigger: ";ch"
+    replace: "✅"
+
+  - trigger: ";ha"
+    replace: "🤙"
