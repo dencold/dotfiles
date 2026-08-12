@@ -19,4 +19,10 @@
     "light": "One Light",
     "dark": "One Dark",
   },
+  "project_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
 }
