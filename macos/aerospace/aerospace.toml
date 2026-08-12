@@ -64,9 +64,9 @@ automatically-unhide-macos-hidden-apps = true
 # even when they are invisible.
 # This config option is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1", "2", "3", "A", "C", "D", "E", "F",
-                         "I", "M", "N", "O", "P", "Q",
-                         "S", "U", "W", "X", "Y", "Z"]
+persistent-workspaces = ["1", "2", "3", "4", "A", "C", "D",
+    "E", "F", "I", "M", "N", "O", "P", "Q", "S", "U", "W",
+    "X", "Y", "Z"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -240,7 +240,7 @@ run = ['layout tiling', 'move-node-to-workspace N']
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'Whatsapp|Messages'
-run = ['layout tiling', 'move-node-to-workspace W']
+run = ['layout tiling', 'move-node-to-workspace C']
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'sunsama|Google Calendar'
