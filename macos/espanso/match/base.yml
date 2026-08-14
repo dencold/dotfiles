@@ -42,32 +42,38 @@ matches:
   # -------------------------------------------------------------------------------------
   # my custom matches
   #
-  - trigger: ";th"
+  - trigger: ";thu"
     replace: "👍"
 
-  - trigger: ";ra"
+  - trigger: ";rai"
     replace: "🙌"
 
-  - trigger: ";lo"
+  - trigger: ";lol"
     replace: "😂"
 
-  - trigger: ";he"
+  - trigger: ";hea"
     replace: "❤️"
 
-  - trigger: ";st"
+  - trigger: ";sta"
     replace: "🤩"
 
-  - trigger: ";11"
+  - trigger: ";hun"
     replace: "💯"
 
-  - trigger: ";yu"
+  - trigger: ";yum"
     replace: "😋"
 
-  - trigger: ";bi"
+  - trigger: ";bik"
     replace: "🚴‍♂️"
 
-  - trigger: ";ch"
+  - trigger: ";che"
     replace: "✅"
 
-  - trigger: ";ha"
+  - trigger: ";han"
     replace: "🤙"
+
+  - trigger: ";bba"
+    replace: "🏀"
+
+  - trigger: ";tra"
+    replace: "🚈"
