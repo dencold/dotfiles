@@ -5,6 +5,8 @@ brew "go"
 brew "python@3.14"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace", trusted: true
 # Terminal-based AI coding assistant
