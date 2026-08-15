@@ -77,3 +77,9 @@ matches:
 
   - trigger: ";tra"
     replace: "🚈"
+
+  - trigger: ";ugh"
+    replace: "😩"
+
+  - trigger: ";cro"
+    replace: "🤞"
