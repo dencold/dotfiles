@@ -1,5 +1,7 @@
 tap "lexiforest/tap"
 tap "nikitabobko/tap"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Open source programming language to build simple/reliable/efficient software

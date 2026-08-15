@@ -51,6 +51,7 @@ alias vim="nvim"
 alias sudo="sudo "
 alias ls="ls -G "
 alias ll="ls -altr"
+alias top=btop
 
 # ---------------------------------------------------------------------------------------
 # Set our functions
