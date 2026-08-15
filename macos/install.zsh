@@ -10,6 +10,7 @@
 # the entire directory to the dotfiles location.
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/zed
+mkdir -p $HOME/.config/yt-dlp
 
 # figure out what directory the script is located in, see:
 # https://unix.stackexchange.com/questions/76505/unix-portable-way-to-get-scripts-absolute-path-in-zsh
@@ -30,6 +31,7 @@ ln -svnf $DIR/ghostty $HOME/.config/ghostty
 ln -svnf $DIR/starship/starship.toml $HOME/.config/starship.toml
 ln -svnf $DIR/zed/settings.json $HOME/.config/zed/settings.json
 ln -svnf $DIR/zed/keymap.json $HOME/.config/zed/keymap.json
+ln -svnf $DIR/yt-dlp/config $HOME/.config/yt-dlp/config
 
 # Espanso unfortunately forces config files to be in $HOME/Library/Application Support
 # We'll replace it with a symlink to the dotfiles location instead

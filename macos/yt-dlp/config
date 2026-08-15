@@ -1,0 +1,16 @@
+# Video: prefer AV1, fall back to VP9, then anything else
+-f "bestvideo[vcodec^=av01]+bestaudio[acodec^=opus]/bestvideo[vcodec^=vp9]+bestaudio[acodec^=opus]/bestvideo+bestaudio/best"
+
+# Container
+--merge-output-format mkv
+
+# Metadata & thumbnail embedded into the file
+--embed-metadata
+--embed-thumbnail
+
+# Subtitles (optional — comment out if you don't want these by default)
+--write-subs
+--sub-lang en
+
+# Output filename pattern
+-o "%(uploader)s/%(title)s.%(ext)s"

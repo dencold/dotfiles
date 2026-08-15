@@ -1,4 +1,7 @@
+tap "lexiforest/tap"
 tap "nikitabobko/tap"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Interpreted, interactive, object-oriented programming language
@@ -7,6 +10,8 @@ brew "python@3.14"
 brew "starship"
 # Feature-rich command-line audio/video downloader
 brew "yt-dlp"
+# HTTP client CLI with browser impersonation support
+brew "lexiforest/tap/curl-cffi", trusted: true
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace", trusted: true
 # Terminal-based AI coding assistant
@@ -17,5 +22,7 @@ cask "espanso"
 cask "flux-app"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
+# Thumbnails, static previews, cover art and metadata for video files
+cask "quicklook-video"
 # Menu bar manager
 cask "thaw"
