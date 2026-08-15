@@ -225,7 +225,7 @@ if.app-name-regex-substring = 'Claude'
 run = ['layout tiling', 'move-node-to-workspace A']
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'BambuStudio'
+if.app-name-regex-substring = 'Bambu Studio'
 run = ['layout tiling', 'move-node-to-workspace B']
 
 [[on-window-detected]]

@@ -83,3 +83,9 @@ matches:
 
   - trigger: ";cro"
     replace: "🤞"
+
+  - trigger: ";hug"
+    replace: "🤗"
+
+  - trigger: ";lov"
+    replace: "🥰"
