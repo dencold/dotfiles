@@ -42,6 +42,8 @@ matches:
   # -------------------------------------------------------------------------------------
   # my custom matches
   #
+
+  # Emoji shortcuts
   - trigger: ";thu"
     replace: "👍"
 
@@ -89,3 +91,12 @@ matches:
 
   - trigger: ";lov"
     replace: "🥰"
+
+  - trigger: ";up"
+    replace: "☝️"
+
+  - trigger: ";tea"
+    replace: "😢"
+
+  - trigger: ";car"
+    replace: "🚗"
