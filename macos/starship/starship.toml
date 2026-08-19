@@ -8,3 +8,8 @@
 
 # default behavior is to add a newline after the prompt, which I don't prefer
 add_newline = false
+
+# I keep seeing the following warning in my terminal:
+#  [WARN] - (starship::context): Scanning current directory timed out.
+# This bumps up timeout to help avoid them
+scan_timeout = 100  # milliseconds, default is 30

@@ -100,3 +100,6 @@ matches:
 
   - trigger: ";car"
     replace: "🚗"
+
+  - trigger: ";dow"
+    replace: "👎"
