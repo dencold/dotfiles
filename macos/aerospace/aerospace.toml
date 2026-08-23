@@ -21,7 +21,11 @@ config-version = 2
 #
 # dc: forcing tile layout for workspace 1, there seems to be an open
 # bug around this: https://github.com/nikitabobko/AeroSpace/issues/568
-# dc: exec-and-forget adds borders to the active window
+# dc: exec-and-forget adds borders to the active window, config options:
+# - active_color / inactive_color — hex ARGB values (e.g. 0xffffffff
+#   for solid white, 0x00ffffff for fully transparent when inactive)
+# - width — border thickness in points
+# - style=round — matches macOS's rounded window corners nicely
 after-startup-command = [
   'workspace 1', 'layout tiles',
   'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 style=round',
