@@ -1,3 +1,4 @@
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "lexiforest/tap"
 tap "nikitabobko/tap"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
@@ -12,6 +13,8 @@ brew "python@3.14"
 brew "starship"
 # Feature-rich command-line audio/video downloader
 brew "yt-dlp"
+# A window border system for macOS
+brew "felixkratz/formulae/borders", trusted: true
 # HTTP client CLI with browser impersonation support
 brew "lexiforest/tap/curl-cffi", trusted: true
 # AeroSpace is an i3-like tiling window manager for macOS
