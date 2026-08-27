@@ -29,6 +29,7 @@ export HISTSIZE=2000
 # Path settings
 # Note that this is LIFO, so the last line wins, make sure preferred tools are at the
 # bottom of the block to take precedence over things above.
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH=$HOME/bin:$PATH
 typeset -aU path    # dedupe step

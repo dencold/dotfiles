@@ -7,6 +7,10 @@ brew "btop"
 brew "ffmpeg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.14"
 # Cross-shell prompt for astronauts
