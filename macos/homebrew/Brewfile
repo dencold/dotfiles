@@ -31,6 +31,8 @@ cask "espanso"
 cask "flux-app"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Home media player
 cask "plex"
 # Thumbnails, static previews, cover art and metadata for video files
