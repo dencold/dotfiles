@@ -23,6 +23,10 @@ brew "felixkratz/formulae/borders", trusted: true
 brew "lexiforest/tap/curl-cffi", trusted: true
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace", trusted: true
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+# Anthropic's official Claude AI desktop app
+cask "claude"
 # Terminal-based AI coding assistant
 cask "claude-code"
 # Cross-platform Text Expander written in Rust
@@ -33,9 +37,19 @@ cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Home media player
 cask "plex"
+# Home media server
+cask "plex-media-server"
+# Podcast platform
+cask "pocket-casts"
 # Thumbnails, static previews, cover art and metadata for video files
 cask "quicklook-video"
+# Screenshot measurement and annotation tool
+cask "shottr"
 # Menu bar manager
 cask "thaw"
+# Multiplayer code editor
+cask "zed"
