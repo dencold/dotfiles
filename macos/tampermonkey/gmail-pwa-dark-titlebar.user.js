@@ -5,9 +5,9 @@
 // @match        https://mail.google.com/*
 // @run-at       document-start
 // @grant        none
-// @version      0.0.3
-// @downloadURL  https://raw.githubusercontent.com/dencold/dotfiles/refs/heads/master/macos/tampermonkey/gmail-pwa-dark-titlebar.js
-// @updateURL    https://raw.githubusercontent.com/dencold/dotfiles/refs/heads/master/macos/tampermonkey/gmail-pwa-dark-titlebar.js
+// @version      0.0.4
+// @downloadURL  https://raw.githubusercontent.com/dencold/dotfiles/refs/heads/master/macos/tampermonkey/gmail-pwa-dark-titlebar.user.js
+// @updateURL    https://raw.githubusercontent.com/dencold/dotfiles/refs/heads/master/macos/tampermonkey/gmail-pwa-dark-titlebar.user.js
 // ==/UserScript==
 
 (function() {
