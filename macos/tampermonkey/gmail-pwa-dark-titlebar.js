@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Gmail PWA Dark Titlebar
 // @description  Updating color for gmail PWA
-// @namespace    local
+// @namespace    https://raw.githubusercontent.com/dencold/dotfiles
 // @match        https://mail.google.com/*
 // @run-at       document-start
 // @grant        none
-// @version      0.0.1
+// @version      0.0.3
 // ==/UserScript==
 
 (function() {
