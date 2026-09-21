@@ -109,3 +109,6 @@ matches:
 
   - trigger: ";che"
     replace: "🧑‍🍳"
+
+  - trigger: ";sal"
+    replace: "🫡"
