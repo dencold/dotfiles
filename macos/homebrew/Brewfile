@@ -49,7 +49,11 @@ cask "pocket-casts"
 cask "quicklook-video"
 # Screenshot measurement and annotation tool
 cask "shottr"
+# Daily planner and calendar
+cask "sunsama"
 # Menu bar manager
 cask "thaw"
+# Native desktop client for WhatsApp
+cask "whatsapp"
 # Multiplayer code editor
 cask "zed"
