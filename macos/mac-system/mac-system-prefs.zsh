@@ -74,6 +74,9 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
+# Speed up mouse tracking (System Settings slider spans roughly 0.0–3.0)
+defaults write -g com.apple.mouse.scaling -float 1.5
+
 ###############################################################################
 # Energy saving                                                               #
 ###############################################################################

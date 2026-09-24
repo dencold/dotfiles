@@ -112,3 +112,9 @@ matches:
 
   - trigger: ";sal"
     replace: "🫡"
+
+  - trigger: ";run"
+    replace: "🏃‍♂️"
+
+  - trigger: ";bee"
+    replace: "🍻"
