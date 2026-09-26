@@ -7,6 +7,8 @@ brew "btop"
 brew "ffmpeg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Deep clean and optimize your Mac
+brew "mole"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Open-source, cross-platform JavaScript runtime environment
