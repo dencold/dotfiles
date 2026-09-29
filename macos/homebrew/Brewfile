@@ -25,6 +25,8 @@ brew "felixkratz/formulae/borders", trusted: true
 brew "lexiforest/tap/curl-cffi", trusted: true
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace", trusted: true
+# Image editing and design software
+cask "affinity"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
 # Anthropic's official Claude AI desktop app
