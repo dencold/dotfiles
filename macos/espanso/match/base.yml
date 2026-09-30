@@ -68,7 +68,7 @@ matches:
   - trigger: ";bik"
     replace: "🚴‍♂️"
 
-  - trigger: ";chk"
+  - trigger: ";che"
     replace: "✅"
 
   - trigger: ";han"
@@ -107,7 +107,7 @@ matches:
   - trigger: ";kis"
     replace: "😘"
 
-  - trigger: ";che"
+  - trigger: ";chf"
     replace: "🧑‍🍳"
 
   - trigger: ";sal"
@@ -118,3 +118,6 @@ matches:
 
   - trigger: ";bee"
     replace: "🍻"
+
+  - trigger: ";bir"
+    replace: "🎂"
